@@ -11,6 +11,11 @@ if [ -f $CONFIG_FILE ]; then
         echo "port number not specified - notebook is not open."
         exit 1
     fi
+else
+    echo "jupyter notebook config not found - notebook is not open."
+    # generate it by doing jupyter notebook --generate-config
+    # and modify the line: # c.NotebookApp.port = 8888.
+    exit 1
 fi
 
 outdir="_log_nb/"
