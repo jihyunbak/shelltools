@@ -13,6 +13,10 @@ case $HOSTNAME in
         PORT_DEF=8851
         ;;
 
+    breeze)
+        PORT_DEF=8101
+        ;;
+    
     *)
         echo "warning: unknown host"
         PORT_DEF=8888
