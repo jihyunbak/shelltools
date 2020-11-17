@@ -28,7 +28,15 @@ PORTNUM=${2:-$PORT_DEF}
 # to connect to remove notebook server
 # syntax: [local_port]:localhost:[remote_port]
 
-ssh -L ${PORTNUM}:localhost:${PORTNUM} $HOSTNAME
+ssh -f -N -L ${PORTNUM}:localhost:${PORTNUM} $HOSTNAME
+
+# NOTE:
+# -f to make background
+# -N to not open a shell
+#
+# now the ssh is in the background. to view the list of ssh connetions do
+# > ps -A | grep ssh
+# (on a mac OS)
 
 # then open browser and go to
 # `localhost:[local_port]`
