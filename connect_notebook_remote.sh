@@ -13,6 +13,10 @@ case $HOSTNAME in
         PORT_DEF=8851
         ;;
 
+    catscan)
+        PORT_DEF=8401
+        ;;
+
     breeze)
         PORT_DEF=8101
         ;;
